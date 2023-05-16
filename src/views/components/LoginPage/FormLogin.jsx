@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { InputElement } from './InputElement';
 import { loginRequest } from '../../../api/api-utils';
+import { useEmployeeContext } from '../../../hooks/useEmployeeContext';
 
 export const FormLogin = () => {
   const [formLogin, setFormLogin] = useState({ numEmpleado: '', password: '' });
+
+  const { login } = useEmployeeContext();
 
   const handleFormLogin = ({ target }) => {
     setFormLogin({ ...formLogin, [target.name]: target.value });
@@ -12,7 +15,9 @@ export const FormLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await loginRequest(formLogin);
-    console.log(res);
+    if (res.data?.ok) {
+      login(res.data.employee);
+    }
   };
 
   return (
