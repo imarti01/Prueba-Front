@@ -6,9 +6,9 @@ import { employeeTypes } from '../types/employeeTypes';
 
 export const EmployeeProvider = ({ children }) => {
   const [employeeState, dispatch] = useReducer(employeeReducer, {
-    numEmployee: '',
-    name: '',
-    favCar: '',
+    numEmployee: null,
+    name: null,
+    favCar: null,
   });
 
   const login = (employee) => {

@@ -2,11 +2,14 @@ import { useState } from 'react';
 import { InputElement } from './InputElement';
 import { loginRequest } from '../../../api/api-utils';
 import { useEmployeeContext } from '../../../hooks/useEmployeeContext';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export const FormLogin = () => {
   const [formLogin, setFormLogin] = useState({ numEmpleado: '', password: '' });
 
   const { login } = useEmployeeContext();
+  const navigate = useNavigate();
 
   const handleFormLogin = ({ target }) => {
     setFormLogin({ ...formLogin, [target.name]: target.value });
@@ -17,6 +20,20 @@ export const FormLogin = () => {
     const res = await loginRequest(formLogin);
     if (res.data?.ok) {
       login(res.data.employee);
+      navigate('/');
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: `${res}`,
+        confirmButtonColor: '#009368',
+        iconColor: '#009368',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown',
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp',
+        },
+      });
     }
   };
 

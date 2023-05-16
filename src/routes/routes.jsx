@@ -1,12 +1,13 @@
-import { Suspense, lazy } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { Suspense, lazy } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import { PrivateRoute } from './PrivateRoute';
 
-const Login = lazy(() => import("./../views/pages/Login"));
-const Home = lazy(() => import("./../views/pages/Home"));
+const Login = lazy(() => import('./../views/pages/Login'));
+const Home = lazy(() => import('./../views/pages/Home'));
 
 export const router = createBrowserRouter([
   {
-    path: "/login",
+    path: '/login',
     element: (
       <Suspense fallback={<></>}>
         <Login />
@@ -14,10 +15,12 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: "/",
+    path: '/',
     element: (
       <Suspense fallback={<></>}>
-        <Home />
+        <PrivateRoute>
+          <Home />
+        </PrivateRoute>
       </Suspense>
     ),
   },
