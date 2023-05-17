@@ -1,8 +1,11 @@
+import './InputElement.scss';
+
 export const InputElement = ({ labelText, type, name, value, onChange }) => {
   return (
-    <label>
+    <label className="input-element">
       {labelText}
       <input
+        className="input-element__input"
         type={type}
         name={name}
         value={value}

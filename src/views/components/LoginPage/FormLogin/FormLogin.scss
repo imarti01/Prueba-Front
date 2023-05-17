@@ -1,0 +1,28 @@
+@import "../../../../scss/theme/variables";
+@import "../../../../scss/styles/mixins";
+
+.form-login {
+    @include flexCol(center, space-evenly);
+    width: 100%;
+    min-height: 100vh;
+    padding: 6rem 0rem;
+
+    &__form {
+
+        @include flexCol(center, center);
+        width:80%;
+        height: 60vh;
+        background-color: $green-color;
+
+        &--title {
+            font-size: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        &--button {
+            width: 80%;
+            padding: 0.4rem;
+            margin-top: 2rem;
+        }
+    }
+}

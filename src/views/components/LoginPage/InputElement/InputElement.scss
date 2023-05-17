@@ -1,0 +1,15 @@
+@import "../../../../scss/theme/variables";
+@import "../../../../scss/styles/mixins";
+
+.input-element {
+    @include flexCol(start, center);
+    width: 80%;
+    padding: 0.3rem 0rem;
+
+    &__input {
+        margin-top: 0.4rem;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.2rem;
+    }
+}

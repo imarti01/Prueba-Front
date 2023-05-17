@@ -1,7 +1,20 @@
-// @import "./scss/styles/mixins"
+@import "./scss/styles/mixins";
+@import "./scss/theme/variables";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  background-color: $white-color;
+  color: $black-color;
+  font-family: $roboto;
+}
+
+#root {
+  padding: 0;
+}
+
+@include scrollbar($green-color, $white-color)
