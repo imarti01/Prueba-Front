@@ -3,6 +3,5 @@
 
 .results-container {
     width: 100%;
-
-    
+    @include flexCol(center, flex-start);
 }

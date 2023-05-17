@@ -37,3 +37,31 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin inputCheckbox ($bg-color, $border-color, $check-color) {
+  display: flex;
+  appearance: none;
+  background: $bg-color;
+  border: 1px solid $border-color;
+  height: 1.2rem;
+  width: 1.2rem;    
+  border-radius: 3px;   
+  cursor: pointer; 
+
+  &::after {
+    content: '✔';
+    margin: auto;
+  }
+
+  &:not(:checked)::after {
+    color: transparent;
+    text-shadow: 0 0 0 transparent;
+    transition: color 200ms ease-out, text-shadow 150ms ease-out 25ms;
+  }
+
+  &:checked::after {
+    color: $check-color;
+    text-shadow: 2px 3px 2px fade(black, 20);
+    transition: color 200ms ease-out, text-shadow 150ms ease-out 25ms;
+  }
+}

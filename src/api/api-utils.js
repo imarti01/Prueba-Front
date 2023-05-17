@@ -14,3 +14,10 @@ export const getAllCarsRequest = async (token) => {
     .get(`${API_URL}/cars/allCars`, { headers })
     .catch((res) => res.response.data.msg);
 };
+
+export const editFavCar = async (token, carId, userId) => {
+  const headers = { 'x-token': token };
+  return await axios
+    .get(`${API_URL}/cars/allCars`, { headers })
+    .catch((res) => res.response.data.msg);
+};
