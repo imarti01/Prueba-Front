@@ -37,7 +37,7 @@ export const MainContainerHome = () => {
   return (
     <div>
       <HeaderEmployee />
-      <SearchInput setResultsSearch={setResultsSearch} />
+      <SearchInput setResultsSearch={setResultsSearch} allCars={allCars} />
       <ResultsContainer carsArr={resultsSearch} />
     </div>
   );

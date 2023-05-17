@@ -5,19 +5,19 @@ export const HeaderEmployee = () => {
   const { employeeState } = useEmployeeContext();
 
   return (
-    <div className="header-employee">
-      <div>
-        <h3>
+    <header className="header-employee">
+      <div className="header-employee__info">
+        <h4>
           Num.Empleado: <span>{employeeState.numEmployee}</span>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Nombre: <span>{employeeState.name}</span>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Coche favorito:{' '}
           <span>{employeeState.favCar ? employeeState.favCar : ''}</span>
-        </h3>
+        </h4>
       </div>
-    </div>
+    </header>
   );
 };

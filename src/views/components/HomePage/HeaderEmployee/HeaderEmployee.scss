@@ -1,0 +1,25 @@
+@import "../../../../scss/theme/variables";
+@import "../../../../scss/styles/mixins";
+
+.header-employee {
+    width: 100%;
+    @include flexRow(center, center);
+    padding: 1.5rem;
+    
+    &__info {
+        width: 95%;
+        height: 6rem;
+        padding: 0.5rem;
+        box-shadow: 2px 2px 5px $green-color;
+        @include flexCol("", space-between);
+
+        h4 {
+            color: $green-hover;
+            @include flexRow(center, space-between);
+        
+            span {
+                color: $black-color;
+            }
+        }
+    }
+}
