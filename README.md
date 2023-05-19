@@ -10,7 +10,7 @@ Este proyecto está creado con [Vite](https://vitejs.dev/guide/).
 Clonar el repositorio:
 
 ```bash
-$ git clone https://github.com/imarti01/react-app.git
+$ git clone https://github.com/imarti01/Prueba-Front
 ```
 
 Ejecutar `npm i` en la terminal para instalar las dependencias.
