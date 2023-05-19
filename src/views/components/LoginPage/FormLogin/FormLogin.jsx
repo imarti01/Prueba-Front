@@ -35,16 +35,16 @@ export const FormLogin = () => {
   return (
     <div className="form-login">
       <form className="form-login__form" onSubmit={handleSubmit}>
-        <h2 className="form-login__form--title">Portal Empleado</h2>
+        <h2 className="form-login__form--title">PORTAL EMPLEADO</h2>
         <InputElement
-          labelText="Num.Empleado"
+          labelText="NUM.EMPLEADO"
           type="text"
           name="numEmpleado"
           value={formLogin.numEmpleado}
           onChange={handleFormLogin}
         />
         <InputElement
-          labelText="Password"
+          labelText="PASSWORD"
           type="password"
           name="password"
           value={formLogin.password}

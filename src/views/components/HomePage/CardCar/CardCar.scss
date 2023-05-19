@@ -6,10 +6,11 @@
     @include flexCol(center, center);
     padding: 1.5rem;
     margin: 1rem;
-    box-shadow: 2px 2px 5px $green-color;
+    border-radius: 1rem;
+        box-shadow: 1px 1px 10px $gray-color;
 
     &__input {
-        @include inputCheckbox($white-color, $black-color, $green2-color)
+        @include inputCheckbox($white-color, $green-color, $green2-color)
     }
 
     &__text {

@@ -1,32 +1,43 @@
 @import "../../../../scss/theme/variables";
 @import "../../../../scss/styles/mixins";
+@import "../../../../scss/theme/breakpoints";
 
 .form-login {
     @include flexCol(center, space-evenly);
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     padding: 6rem 0rem;
+    background-color: $green-color;
 
     &__form {
 
         @include flexCol(center, center);
         width:80%;
         height: 60vh;
-        background-color: $green-color;
+        background-color: $white-color;
+        border-radius: 0.5rem;
+
+        @include sm {
+            width: 30rem;
+        }
+    
 
         &--title {
-            font-size: 2rem;
             padding-bottom: 3rem;
+            color: $green-color;
         }
 
         &--button {
             width: 80%;
-            padding: 0.4rem;
+            padding: 0.6rem 0.3rem;
             margin-top: 2rem;
             cursor: pointer; 
-            border-color: $white-color;
+            border: 1px solid $green-color;
             background-color: $green2-color;
             font-size: 1rem;
+            border-radius: 0.3rem;
+            color: $white-color;
+            font-family: $rubik;
 
             &:hover{
                 background-color: $green-hover;

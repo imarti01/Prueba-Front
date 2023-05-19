@@ -13,9 +13,10 @@
     
     &__info {
         width: 95%;
-        height: 6rem;
-        padding: 0.5rem;
-        box-shadow: 2px 2px 5px $green-color;
+        height: 6.5rem;
+        padding: 0.7rem 1.2rem;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 10px $gray-color;
         @include flexCol("", space-between);
 
         @include sm {
@@ -23,11 +24,13 @@
         }  
 
         h4 {
-            color: $green-hover;
+            color: $green-color;
+            font-family: $roboto;
             @include flexRow(center, space-between);
         
             span {
-                color: $black-color;
+                color: $gray-color;
+                font-weight: 400;
             }
         }
     }

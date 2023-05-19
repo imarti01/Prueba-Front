@@ -18,14 +18,3 @@
     }
 }
  
-@mixin xl {
-    @media (min-width: #{$screen-xl-min}) {
-        @content;
-    }
-}
-
-@mixin custom($screen) {
-    @media (min-width: $screen) {
-        @content;
-    }
-}

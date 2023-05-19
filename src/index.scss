@@ -9,12 +9,13 @@
 
 body{
   background-color: $white-color;
-  color: $black-color;
-  font-family: $roboto;
+  color: $gray-color;
+  font-family: $rubik;
 }
 
 #root {
   padding: 0;
+  margin: 0;
 }
 
 @include scrollbar($green-color, $white-color)
