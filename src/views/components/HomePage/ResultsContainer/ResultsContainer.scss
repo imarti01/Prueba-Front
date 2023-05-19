@@ -1,7 +1,16 @@
 @import "../../../../scss/styles/mixins";
 @import "../../../../scss/theme/variables";
+@import "../../../../scss/theme/breakpoints";
 
 .results-container {
     width: 100%;
     @include flexCol(center, flex-start);
+    padding: 2rem;
+
+    @include sm {
+        @include flexRow(center, space-evenly);
+        flex-wrap: wrap;
+    }
+
+
 }

@@ -8,16 +8,26 @@ export const loginRequest = async (formData) => {
     .catch((res) => res.response.data.msg);
 };
 
-export const getAllCarsRequest = async (token) => {
-  const headers = { 'x-token': token };
+export const editFavCar = async (carId, numEmployee) => {
   return await axios
-    .get(`${API_URL}/cars/allCars`, { headers })
+    .post(
+      `${API_URL}/employee/favCar`,
+      { carId, numEmployee },
+      {
+        headers: {
+          'x-token': window.localStorage.getItem('token'),
+        },
+      }
+    )
     .catch((res) => res.response.data.msg);
 };
 
-export const editFavCar = async (token, carId, userId) => {
-  const headers = { 'x-token': token };
+export const getAllCarsRequest = async () => {
   return await axios
-    .get(`${API_URL}/cars/allCars`, { headers })
+    .get(`${API_URL}/cars/allCars`, {
+      headers: {
+        'x-token': window.localStorage.getItem('token'),
+      },
+    })
     .catch((res) => res.response.data.msg);
 };

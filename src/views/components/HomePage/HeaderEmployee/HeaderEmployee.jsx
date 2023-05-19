@@ -15,7 +15,11 @@ export const HeaderEmployee = () => {
         </h4>
         <h4>
           Coche favorito:{' '}
-          <span>{employeeState.favCar ? employeeState.favCar : ''}</span>
+          <span>
+            {employeeState.favCar
+              ? employeeState.favCar.brand + ' ' + employeeState.favCar.name
+              : ''}
+          </span>
         </h4>
       </div>
     </header>

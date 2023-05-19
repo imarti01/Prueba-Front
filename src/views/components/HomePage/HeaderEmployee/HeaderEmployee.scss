@@ -1,10 +1,15 @@
 @import "../../../../scss/theme/variables";
 @import "../../../../scss/styles/mixins";
+@import "../../../../scss/theme/breakpoints";
 
 .header-employee {
     width: 100%;
     @include flexRow(center, center);
     padding: 1.5rem;
+
+    @include sm {
+        justify-content: flex-end;
+    }
     
     &__info {
         width: 95%;
@@ -12,6 +17,10 @@
         padding: 0.5rem;
         box-shadow: 2px 2px 5px $green-color;
         @include flexCol("", space-between);
+
+        @include sm {
+            width: 20rem;
+        }  
 
         h4 {
             color: $green-hover;

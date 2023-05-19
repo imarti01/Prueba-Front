@@ -18,13 +18,17 @@ export const EmployeeProvider = ({ children }) => {
       payload: {
         numEmployee: employee.numEmployee,
         name: employee.name,
-        // favCar: employee.favCar
+        favCar: employee?.favCar,
       },
     });
   };
 
+  const editFavCarState = (favCar) => {
+    dispatch({ type: employeeTypes.changeFavCar, payload: favCar });
+  };
+
   return (
-    <EmployeeContext.Provider value={{ login, employeeState }}>
+    <EmployeeContext.Provider value={{ employeeState, login, editFavCarState }}>
       {children}
     </EmployeeContext.Provider>
   );

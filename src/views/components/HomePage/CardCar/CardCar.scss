@@ -2,11 +2,11 @@
 @import "../../../../scss/theme/variables";
 
 .card-car {
-    width: 70%;
+    width: 13rem;
     @include flexCol(center, center);
     padding: 1.5rem;
-    background-color: $green-color;
     margin: 1rem;
+    box-shadow: 2px 2px 5px $green-color;
 
     &__input {
         @include inputCheckbox($white-color, $black-color, $green2-color)
@@ -17,24 +17,25 @@
     }
 
     &__img {
-        width: 60vw;
-        height: 30vh;
+        width: 11rem;
+        height: 11rem;
+        object-fit: cover;
         object-fit: contain;
         
     }
 
     &__no-img {
         @include flexCol(center, center);
-        width: 60vw;
-        height: 30vh;
+        width: 11rem;
+        height: 11rem;
 
         &--spinner {
             display: inline-block;
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255,255,255,.3);
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(63, 231, 153, 0.3);
             border-radius: 50%;
-            border-top-color: #fff;
+            border-top-color: $green-color;
             animation: spin 1s ease-in-out infinite;
             -webkit-animation: spin 1s ease-in-out infinite;
 

@@ -10,8 +10,7 @@ export const MainContainerHome = () => {
   const [resultsSearch, setResultsSearch] = useState([]);
 
   const getAllData = async () => {
-    const token = localStorage.getItem('token');
-    const res = await getAllCarsRequest(token);
+    const res = await getAllCarsRequest();
     if (res.data?.ok) {
       const orderedCarArr = res.data.cars.sort((a, b) => {
         if (a.brand < b.brand) return -1;
